@@ -1,0 +1,270 @@
+.vr-transaction__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.vr-transaction-content {
+    position: fixed;
+    padding: 25px;
+    top: 50%;
+    left: 50%;
+    overflow: auto !important;
+    max-height: calc(100vh - 100px) !important;
+    border-radius: 20px;
+    z-index: 11;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    width: min(800px, 100% - 40px);
+}
+
+.vr-transaction-content.complete {
+    width: fit-content;
+}
+
+.vr-transaction-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vr-transaction-overlay__content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vr-transaction-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 100%;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    width: 25px;
+    height: auto;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 100%;
+    margin: 0;
+    min-height: auto;
+    font-size: 18px;
+}
+
+.vr-transaction__content > div {
+    border-radius: 15px;
+    border: 1px solid #b9b9b9;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.vietqr-manual__content {
+    font-size: 14px;
+}
+
+.vietqr-manual__content button {
+    white-space: nowrap;
+    padding-block: 2px;
+}
+
+.vietqr-button {
+    border-radius: 0;
+    background: #9be79b;
+    color: green;
+    box-shadow: none;
+    border: none;
+    padding: 5px 8px;
+    display: inline-block;
+    margin: 0;
+}
+
+.vietqr-scan__img {
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 10px;
+}
+
+.vietqr-scan__img > div {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.vietqr-scan__img > div:first-child {
+    margin-bottom: 15px;
+}
+
+.vietqr-scan__img table {
+    margin: auto;
+    width: fit-content;
+}
+
+.vietqr-recheck,
+.vietqr-save-qr {
+    border-radius: 8px;
+    background: #4e9be7;
+    color: white;
+    margin-top: 10px;
+}
+
+.vietqr-button.vietqr-button--big {
+    font-size: 16px;
+    padding: 8px 10px;
+}
+
+.vietqr-button:hover {
+    background: #c6e7c6;
+}
+
+.vietqr-manual__table {
+    margin-inline: auto;
+}
+
+.vietqr-manual__table,
+.vietqr-manual__table td
+{
+    border: none;
+}
+
+.vietqr-manual__table td:first-child {
+    width: 100px;
+}
+
+.vr-transaction-text {
+    display: inline-block;
+    padding: 4px 6px;
+    border-radius: 4px;
+    border: 1px solid green;
+}
+
+.vr-transaction-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.vr-transaction-info img {
+    width: 50px;
+    object-fit: contain;
+}
+
+.vr-transaction-info > div > p:first-child {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: black;
+}
+
+.vr-transaction-info > div > p:nth-child(2) {
+    color: gray;
+    margin-bottom: 0;
+}
+
+.vr-transaction-info > div > p:nth-child(3) {
+    color: black;
+}
+
+.vr-transaction-info .vietqr-button {
+    font-size: 14px;
+    color: white;
+    background: #187cdc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.vietqr-transaction-text {
+    line-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .vr-transaction__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .vr-transaction__content {
+        grid-template-columns: 1fr;
+    }
+
+    .jquery-modal.blocker {
+        padding: 0;
+    }
+
+    div.vr-transaction-wrapper {
+        padding: 5px;
+    }
+
+    .vr-transaction__content > div {
+        padding: 10px;
+    }
+
+    .vietqr-scan__print-area {
+        font-size: 12px;
+    }
+
+    .vietqr-scan__print-area > p {
+        margin-bottom: 4px;
+    }
+}
+
+/*success popup*/
+.vr-transaction-success__title {
+    color: green;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.vr-transaction-success__total {
+    text-align: center;
+    color: #05931d;
+    font-size: 35px;
+    margin-block: 0 8px;
+    font-weight: 500;
+}
+
+.btn-manual-check {
+    margin-top: 15px;
+    border-radius: 8px;
+    background: #4e9be7;
+    color: white;
+    margin-top: 10px;
+    display: block;
+    margin-inline: auto;
+}
+
+/*fix*/
+small a {
+    font-size: inherit;
+}
+
+.jquery-modal.blocker {
+    z-index: 1000000;
+    padding: 20px 5px;
+}
+
+.modal a.close-modal {
+    filter: invert(1) drop-shadow(2px 4px 4px rgba(0,0,0,0.5));
+}
+
+.payment_box.payment_method_bacs {
+    margin-top: 0 !important;
+}

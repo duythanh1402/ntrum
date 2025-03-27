@@ -1,0 +1,13 @@
+{
+    "require": {
+        "symfony\/dotenv": "^5.4",
+        "guzzlehttp\/guzzle": "^7.9",
+        "monolog\/monolog": "^2.9",
+        "respect\/validation": "^2.2",
+        "chillerlan\/php-qrcode": "^5.0",
+        "catfan\/medoo": "^2.1"
+    },
+    "require-dev": {
+        "humbug\/php-scoper": "^0.17.5"
+    }
+}

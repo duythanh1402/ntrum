@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "scripts": {
+    "watch-admin-css": "npx tailwindcss -c tailwind.config.admin.js -i ./admin/css/input.css -o ./admin/css/output.css --watch",
+    "build-admin-css": "npx tailwindcss -c tailwind.config.admin.js -i ./admin/css/input.css -o ./admin/css/output.css",
+    "watch-public-css": "npx tailwindcss -c tailwind.config.public.js -i ./public/css/input.css -o ./public/css/output.css --watch",
+    "build-public-css": "npx tailwindcss -c tailwind.config.public.js -i ./public/css/input.css -o ./public/css/output.css",
+    "watch-all": "npm run watch-admin-css && npm run watch-public-css",
+    "build-all": "npm run build-admin-css && npm run build-public-css"
+  }
+}
